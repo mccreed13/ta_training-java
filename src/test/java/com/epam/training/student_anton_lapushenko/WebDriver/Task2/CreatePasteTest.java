@@ -3,15 +3,19 @@ package com.epam.training.student_anton_lapushenko.WebDriver.Task2;
 import com.epam.training.student_anton_lapushenko.WebDriver.Task2.enums.ExpirationTime;
 import com.epam.training.student_anton_lapushenko.WebDriver.Task2.pages.CreateNewPastePage;
 import com.epam.training.student_anton_lapushenko.WebDriver.Task2.pages.PastePage;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CreatePasteTest extends BaseChromeTest {
+public class CreatePasteTest {
+    protected WebDriver driver;
 
     @BeforeEach
     public void navigate() {
+        driver = BrowserFactory.CHROME.createDriver();
         driver.get("https://pastebin.com/");
     }
 
@@ -39,5 +43,12 @@ public class CreatePasteTest extends BaseChromeTest {
         createNewPastePage.setNameOrTitle(nameOrTitle);
         createNewPastePage.clickSubmit();
         return new PastePage(driver);
+    }
+
+    @AfterEach
+    void quitDriver() {
+        if(driver != null) {
+            driver.quit();
+        }
     }
 }
