@@ -36,7 +36,9 @@ public class CreateNewPastePage {
         selectHighlighting.click();
 
         List<WebElement> options = driver.findElements(optionsBy);
-        options.get(2).click();
+
+        int indexOptionHighlightingBash = 2;
+        options.get(indexOptionHighlightingBash).click();
     }
 
     public void setExpirationTime(ExpirationTime expirationTime) {

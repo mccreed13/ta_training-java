@@ -1,4 +1,4 @@
-package com.epam.training.student_anton_lapushenko.WebDriver.Task2;
+package com.epam.training.student_anton_lapushenko.WebDriver.Task2.factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

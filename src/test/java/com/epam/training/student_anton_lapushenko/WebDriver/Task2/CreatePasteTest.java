@@ -1,6 +1,7 @@
 package com.epam.training.student_anton_lapushenko.WebDriver.Task2;
 
 import com.epam.training.student_anton_lapushenko.WebDriver.Task2.enums.ExpirationTime;
+import com.epam.training.student_anton_lapushenko.WebDriver.Task2.factory.BrowserFactory;
 import com.epam.training.student_anton_lapushenko.WebDriver.Task2.pages.CreateNewPastePage;
 import com.epam.training.student_anton_lapushenko.WebDriver.Task2.pages.PastePage;
 import org.junit.jupiter.api.AfterEach;
