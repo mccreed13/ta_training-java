@@ -1,10 +1,10 @@
-package com.epam.training.student_anton_lapushenko.WebDriver.Task1;
+package com.epam.training.student_anton_lapushenko.WebDriver.Task1.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-class PastePage {
+public class PastePage {
     WebDriver driver;
 
     private final By nameOrTitleBy = By.xpath("//*[@class='info-top']/h1");

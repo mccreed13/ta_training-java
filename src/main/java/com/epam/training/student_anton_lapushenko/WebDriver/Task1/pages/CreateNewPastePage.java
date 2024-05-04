@@ -1,12 +1,13 @@
-package com.epam.training.student_anton_lapushenko.WebDriver.Task1;
+package com.epam.training.student_anton_lapushenko.WebDriver.Task1.pages;
 
+import com.epam.training.student_anton_lapushenko.WebDriver.Task1.enums.ExpirationTime;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-class CreateNewPastePage {
+public class CreateNewPastePage {
     protected WebDriver driver;
 
     private final By textAreaBy = By.id("postform-text");
