@@ -1,4 +1,4 @@
-package com.epam.training.student_anton_lapushenko.WebDriver.Task2;
+package com.epam.training.student_anton_lapushenko.WebDriver.Task2.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,11 +14,6 @@ public class PastePage {
 
     public PastePage(WebDriver driver) {
         this.driver = driver;
-        By wrapperPasteBy = By.xpath("//*[contains(@class, 'post-view')]");
-        if (driver.findElements(wrapperPasteBy).isEmpty()) {
-            throw new IllegalStateException("This is not Paste Page," +
-                    " current page is: " + driver.getCurrentUrl());
-        }
     }
 
     public String getNameOrTitle() {
