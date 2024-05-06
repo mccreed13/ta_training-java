@@ -1,4 +1,4 @@
-package com.epam.training.student_anton_lapushenko.WebDriver.Task2;
+package com.epam.training.student_anton_lapushenko.WebDriver.Task2.enums;
 
 public enum ExpirationTime {
     Never("NEVER"), Burn_after_read("BURN AFTER READ"),
