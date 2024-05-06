@@ -1,8 +1,8 @@
 package com.epam.training.student_anton_lapushenko.WebDriver.Task2;
 
 import com.epam.training.student_anton_lapushenko.WebDriver.Task2.enums.ExpirationTime;
-import com.epam.training.student_anton_lapushenko.WebDriver.Task2.pages.CreateNewPastePage;
 import com.epam.training.student_anton_lapushenko.WebDriver.Task2.pages.PastePage;
+import com.epam.training.student_anton_lapushenko.WebDriver.Task2.steps.CreatePasteSteps;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,7 +22,8 @@ public class CreatePasteTest extends BaseTest{
 
         String nameOrTitle = "how to gain dominance among developers";
 
-        PastePage pastePage = createPasteWithBashHighlighting(text, nameOrTitle, ExpirationTime.TenMin);
+        PastePage pastePage = new CreatePasteSteps(driver)
+                .createPasteWithBashHighlighting(text, nameOrTitle, ExpirationTime.TenMin);
 
         assertEquals(nameOrTitle, pastePage.getNameOrTitle());
         assertEquals(ExpirationTime.TenMin.text, pastePage.getExpireTime());
@@ -30,15 +31,7 @@ public class CreatePasteTest extends BaseTest{
         assertEquals(text, pastePage.getText());
     }
 
-    public PastePage createPasteWithBashHighlighting(String text, String nameOrTitle, ExpirationTime expirationTime) {
-        CreateNewPastePage createNewPastePage = new CreateNewPastePage(driver);
-        createNewPastePage.setText(text);
-        createNewPastePage.setBashHighlighting();
-        createNewPastePage.setExpirationTime(expirationTime);
-        createNewPastePage.setNameOrTitle(nameOrTitle);
-        createNewPastePage.clickSubmit();
-        return new PastePage(driver);
-    }
+
 
 
 }
