@@ -7,13 +7,13 @@ import org.openqa.selenium.WebElement;
 public class GoogleCloudMainPage {
     WebDriver driver;
 
+    private final By searchOpenButtonBy = By.className("YSM5S");
+    private final By searchFieldBy = By.id("i4");
+    private final By searchButtonBy = By.xpath("//i[@aria-label='Search']");
+
     public GoogleCloudMainPage(WebDriver driver) {
         this.driver = driver;
     }
-
-    private final By searchOpenButtonBy = By.className("YSM5S");
-    private final By searchFieldBy = By.id("i4");
-    private final By searchButtonBy = By.xpath("//*[@class='google-material-icons PETVs PETVs-OWXEXe-UbuQg']");
 
     public GoogleCloudSearchPage searchCalculator() {
         WebElement searchOpenButton = driver.findElement(searchOpenButtonBy);

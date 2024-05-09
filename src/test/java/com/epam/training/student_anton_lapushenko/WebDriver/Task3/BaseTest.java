@@ -1,6 +1,6 @@
 package com.epam.training.student_anton_lapushenko.WebDriver.Task3;
 
-import com.epam.training.student_anton_lapushenko.WebDriver.Task2.factory.DriverFactory;
+import com.epam.training.student_anton_lapushenko.WebDriver.Task3.factory.DriverFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
@@ -26,11 +26,11 @@ class BaseTest {
         }
         driver = new DriverFactory().createInstance(browser);
     }
-//
-//    @AfterEach
-//    void quitDriver() {
-//        if(driver != null) {
-//            driver.quit();
-//        }
-//    }
+
+    @AfterEach
+    void quitDriver() {
+        if(driver != null) {
+            driver.quit();
+        }
+    }
 }
