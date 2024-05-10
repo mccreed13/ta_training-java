@@ -13,6 +13,7 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
 public class GoogleCloudCalculatorTest extends CommonConditions{
 
     @BeforeEach
