@@ -1,8 +1,5 @@
 package com.epam.training.student_anton_lapushenko.Framework.Task1.model;
 
-import com.epam.training.student_anton_lapushenko.Framework.Task1.enums.LocalSSD;
-import com.epam.training.student_anton_lapushenko.Framework.Task1.enums.NumberOfGPUs;
-
 public class ComputerEngine {
     private String instances;
     private String operatingSoftware;

@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 public class GoogleCloudSearchPage {
     WebDriver driver;
 
-    private final By searchCalculatorResultBy = By.xpath("//a[@track-type='search-result'][@track-metadata-eventdetail='cloud.google.com/products/calculator']");
+    private final By searchCalculatorResultBy = By.xpath("//a[@track-type='search-result' and @track-metadata-eventdetail='cloud.google.com/products/calculator']");
 
     public GoogleCloudSearchPage(WebDriver driver) {
         this.driver = driver;

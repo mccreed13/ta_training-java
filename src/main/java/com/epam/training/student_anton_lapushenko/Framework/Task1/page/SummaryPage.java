@@ -1,8 +1,5 @@
 package com.epam.training.student_anton_lapushenko.Framework.Task1.page;
 
-import com.epam.training.student_anton_lapushenko.Framework.Task1.enums.GPUModels;
-import com.epam.training.student_anton_lapushenko.Framework.Task1.enums.LocalSSD;
-import com.epam.training.student_anton_lapushenko.Framework.Task1.enums.NumberOfGPUs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,9 +22,9 @@ public class SummaryPage {
         this.driver = driver;
     }
 
-    public int getInstanceNumber() {
+    public String getInstanceNumber() {
         WebElement instanceNumber = driver.findElement(instanceNumbersBy);
-        return Integer.parseInt(instanceNumber.getText());
+        return instanceNumber.getText();
     }
 
     public String getOperatingSystem() {
@@ -45,19 +42,19 @@ public class SummaryPage {
         return machineType.getText().split(",")[0];
     }
 
-    public GPUModels getGPUType() {
+    public String getGPUType() {
         WebElement GPUType = driver.findElement(GPUTypeBy);
-        return GPUModels.get(GPUType.getText());
+        return GPUType.getText();
     }
 
-    public NumberOfGPUs getNumberOfGPU() {
+    public String getNumberOfGPU() {
         WebElement numberOfGPU = driver.findElement(NumberOfGPUBy);
-        return NumberOfGPUs.get(Integer.parseInt(numberOfGPU.getText()));
+        return numberOfGPU.getText();
     }
 
-    public LocalSSD getLocalSSD() {
+    public String getLocalSSD() {
         WebElement localSSD = driver.findElement(localSSDBy);
-        return LocalSSD.get(localSSD.getText());
+        return localSSD.getText();
     }
 
     public String getLocation() {

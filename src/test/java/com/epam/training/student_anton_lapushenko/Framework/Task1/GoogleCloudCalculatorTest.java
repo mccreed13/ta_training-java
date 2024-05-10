@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class GoogleCloudCalculatorTest extends CommonConditions{
 
     @BeforeEach
-    public void navigate() {
+    public void manage() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
