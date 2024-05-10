@@ -6,14 +6,16 @@ import com.epam.training.student_anton_lapushenko.Framework.Task1.page.GoogleClo
 
 import com.epam.training.student_anton_lapushenko.Framework.Task1.page.SummaryPage;
 import com.epam.training.student_anton_lapushenko.Framework.Task1.service.ComputerEngineCreator;
+import com.epam.training.student_anton_lapushenko.Framework.Task1.util.Screenshotter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
+@ExtendWith(Screenshotter.class)
 public class GoogleCloudCalculatorTest extends CommonConditions{
 
     @BeforeEach
